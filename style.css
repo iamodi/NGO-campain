@@ -1,0 +1,412 @@
+/*
+
+Title: Stylesheet Template
+
+Author: Modi Chen
+
+*/
+
+body {
+	background: radial-gradient(#89c5c6, #3e505e); 
+	margin: 0;
+	font-family:'Poiret One', cursive;
+}
+
+footer {
+	height: 27px;
+	text-align: center;
+	padding-top: .2em;
+	background-color: #252525;
+	color: white;
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+h1 {
+	font-size: 70px;
+	font-weight: 900;
+}
+
+p {
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	font-weight: 100;
+	color: white;
+}
+
+/*.screen {
+	-webkit-animation: backgroundcolor 20s forwards;
+	transition: all 1s ease-in-out;
+}*/
+
+a {
+	color: #15cedc;
+}
+
+a:hover {
+	color: cyan;
+	cursor: hand;
+}
+
+
+/* Layout
+------------------------------------------*/
+.temp-icon {
+	height: 300px;
+}
+
+.meter {
+	background: #f25938;
+	width: 7px;
+	height: 30px;
+	border-radius: 3px;
+	position: absolute;
+	left: 85px;
+	bottom: 59px;
+	-webkit-animation: tempmove 20s forwards;
+}
+
+.text {
+	height: 340px;
+	color: white;
+	float: right;
+	margin-right: 25px;
+}
+
+.button-box {
+	height: 340px;
+}
+
+.logo img {
+	position: relative;
+	margin-top: 2em;
+	float: right;
+	margin-right: 25px;
+}
+
+.temp-icon img{
+	position: relative;
+	margin-top: 5em;
+	margin-left: 40px;
+
+}
+
+.button {
+	display: block;
+	width: 230px;	
+	height: 70px;
+	background-color: #15cedc;
+	color: white;
+	text-align: center;
+	font-size: 25px;
+	padding-top: 20px;
+	float: right;
+	margin-right: 25px;
+	margin-top: 2em;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 900;
+
+}
+
+.button:hover {
+	background-color: #04e5f6;
+	cursor: pointer;
+}
+
+
+.polar-bear {
+	position: absolute;
+	left: 180px;
+	bottom: 320px;
+	-webkit-animation: bearmove 2s infinite; 
+}
+
+.selfie {
+	position: absolute;
+	left: 230px;
+	bottom: 180px;
+	-webkit-animation: showpic 1s forwards;
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+	
+}
+
+.polar-bear-sink {
+	position: absolute;
+	/*left: 180px;*/
+	bottom: 320px;
+	-webkit-animation: sink 20s forwards;
+}
+
+
+.noanimation {
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -o-animation: none !important;
+  -ms-animation: none !important;
+  animation: none !important;
+  transition: all 1s ease-in-out;
+}
+
+.ice {
+	position: absolute;
+	left: 40px;
+	bottom: 0px;
+	-webkit-animation: icemove 2s infinite;
+	transition: all 1s ease-in-out;
+	
+}
+
+.arctic {
+
+}
+
+.sink-it {
+	position: absolute;
+	left: 40px;
+	bottom: 0px;
+	-webkit-animation: sink 20s forwards;
+	transition: all 1s ease-in-out;
+}
+
+
+.water1 {
+	opacity: 0.6;
+	position: absolute;
+	bottom: 0px;
+	-webkit-animation: watermove 2s infinite;
+	-webkit-animation: hightide 20s forwards;
+}
+
+.water2 {
+	opacity: 0.6;
+	position: absolute;
+	bottom: 184px;
+	-webkit-animation: watermove 2s infinite 1s;
+}
+
+.water3 {
+	opacity: 0.6;
+	position: absolute;
+	bottom: 169px;
+	-webkit-animation: watermove 4s infinite 2.5s;
+}
+
+.steps {
+	width: 700px;
+}
+
+
+
+/* Media query middle screen
+------------------------------------------*/
+
+@media screen and (max-width: 2000px) {
+    .polar-bear {
+	    margin-bottom: -100px;
+		width: 470px;
+    }
+
+    .ice {
+		bottom: 0px;
+		width: 670px;
+	}
+
+	.water2 {
+		bottom: 120px;
+	}
+
+	.water3 {
+		bottom: 130px;
+	}
+     
+    h1 {
+		font-size: 60px;
+    }
+
+    p {
+		font-size: 20px;
+    }
+
+    .button {
+    	margin-top: 0;
+    }
+
+    .temp-icon {
+		height: 250px;
+    }
+
+}
+
+/* Media query mobile screen
+------------------------------------------*/
+
+@media screen and (max-width: 600px) {
+    .polar-bear {
+	    position: absolute;
+		width: 400px;
+		margin-bottom: -170px;
+		margin-left: -100px
+    }
+
+    .ice {
+    	left: 10px;
+		bottom: 200px;
+		width: 470px;
+
+	}
+	
+	.water1 {
+		position: absolute;
+		height: 180px;
+		width: 600px
+		bottom:0;
+	}
+	.water2 {
+		height: 80px;
+		width: 600px
+		bottom: 120px;
+	}
+
+	.water3 {
+		height: 80px;
+		width: 600px
+		bottom: 130px;
+	}
+     
+    h1 {
+		font-size: 50px;
+		margin-left: -200px;
+		margin-top: -20px;
+    }
+
+    p {
+		visibility: hidden;
+    }
+
+    .button {
+    		
+    	margin-right: 1em;
+    	/*position: absolute;*/
+    	bottom: 5em;
+    	left: 2em;
+    	
+    }
+
+
+
+}
+
+/* CSS Animation
+-------------------------------------------*/
+
+@-webkit-keyframes watermove {
+	0% {left:0px} 
+	50% {transform:scale(1.1,1.2);left:30px}
+	100% {left:0px}
+
+}
+
+@-webkit-keyframes icemove {
+	0% {transform: rotate(0deg); bottom:0px} 
+	50% {transform: rotate(2deg); bottom:-10px}
+	100% {transform: rotate(0deg); bottom:0px}
+
+}
+
+@-webkit-keyframes bearmove {
+	0% {transform: rotate(0deg); bottom:320px} 
+	50% {transform: rotate(2deg); bottom:315px}
+	100% {transform: rotate(0deg); bottom:320px}
+
+}
+
+
+@-webkit-keyframes tempmove {
+	0% {transform:scale(1,1); left:85px; bottom:59px;} 
+	100% {transform:scale(1,3.3); left:85px; bottom:92px;}
+}
+
+
+@-webkit-keyframes sink {
+	0% {bottom:0px;} 
+	100% {bottom:-380px;}
+}
+
+@-webkit-keyframes nosink {
+	0% {bottom: 0px;} 
+	100% {bottom: 0px;}
+}
+
+@-webkit-keyframes hightide {
+	0% {left:0px} 
+    100% {transform:scale(1.1,2.5); left:30px}
+}
+
+@-webkit-keyframes showpic {
+	0% {
+		transform: translateX(-150%);
+	}
+	50%{
+		transform: translateX(8%);
+	}
+	65%{
+		transform: translateX(-4%);
+	}
+	80%{
+		transform: translateX(4%);
+	}
+	95%{
+		transform: ;translateX(-2%);
+	}			
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>NGO Campaign</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Poiret+One|Raleway:400,100,200,300,800,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="screen">
+
+	    <div id="selfiePic"></div>
+
+		<div id="arcticId" class="arctic">
+			<div class="ice">
+				<img id="iceId" class="img-responsive sink-it" src="images/iceberg.png" alt="ice" >
+			</div><!--  End of ice -->
+
+			<div id="polarBear" class="polar-bear">
+				<img id="polarId" class="img-responsive polar-bear-sink" src="images/polar-bear.png" alt="polar bear">
+			</div><!--  End of Polar Bear -->
+
+			<div class="water">
+					
+				<img id="waterId" class="water1 img-responsive"src="images/water1.png" alt="water">
+
+				<img class="water2 img-responsive"src="images/water2.png" alt="water">
+
+				<img class="water3 img-responsive"src="images/water3.png" alt="water">
+			
+			</div><!--  End of water -->
+		</div><!--  End of arctic -->
+
+		<div class="row">
+			<div class="temp-icon col-xs-8">
+				<img src="images/temp-icon.png" alt="temp icon" width="100px">
+				<div id="meterId" class="meter"></div>
+			</div>
+			<div class="logo col-xs-4">
+				<img src="images/wwflogo.jpg" alt="wwf logo" width="77px">
+			</div>
+		</div><!--  End of row -->
+
+		<div class="row">
+			<div class="col-xs-7"></div>
+			<div id="textId" class="text col-xs-5">
+				<h1>If I disppear ,<br>what about you ?</h1>
+				<br>
+				<p>Polar bears are at the top of the food chain and have an important role in the overall health of the marine environment. Polar bears depend on sea ice for their existence and are directly impacted by climate change—serving as an important indicator species.</p>
+			</div>
+
+				<!-- <div class="steps">
+					
+				</div> -->
+
+			
+		</div><!--  End of row -->
+
+		<div class="row">
+			<div class="col-lg-8"></div>
+			<div id="btPlace" class="button-box col-lg-4">
+				<div id="btChange" class="button">MAKE A CHANGE</div>
+			</div>
+		</div><!--  End of row -->
+</div><!--  End of Screen -->
+		<footer>
+
+			<small>Designed and built by <a href="http://iamodi.github.com">Modi Chen 2016</small>
+
+		</footer> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script>
+	$('#btChange')
+		.mouseover(function() {
+		 $('#polarId').removeClass('polar-bear-sink').addClass('noanimation');
+		 $('#iceId').addClass('noanimation');
+		 $('#waterId').addClass('noanimation');
+		 $('#meterId').addClass('noanimation');
+		 })
+
+		.mouseout(function() {
+		 $('#polarId').addClass('polar-bear-sink').removeClass('noanimation');
+		 $('#iceId').addClass('sink-it').removeClass('noanimation');
+		 $('#waterId').addClass('water1').removeClass('noanimation');
+		 $('#meterId').removeClass('noanimation');
+		 });
+
+    $('#btChange')
+         .click(function() {
+         $(this).html('LET US DO IT!')
+         $('#textId').html('<img class="steps" src="images/steps.png" alt="steps">');
+         $('#arcticId').fadeOut(800);
+         $('#selfiePic').html('<img class="selfie" src="images/selfie.jpg" alt="steps">');
+
+
+         });
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
