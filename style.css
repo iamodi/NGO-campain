@@ -10,6 +10,7 @@ body {
 	background: radial-gradient(#89c5c6, #3e505e); 
 	margin: 0;
 	font-family:'Poiret One', cursive;
+	overflow: hidden;
 }
 
 footer {
@@ -34,6 +35,10 @@ p {
 	font-size: 30px;
 	font-weight: 100;
 	color: white;
+}
+
+.screen {
+	overflow: hidden;
 }
 
 /*.screen {
@@ -66,6 +71,9 @@ a:hover {
 	left: 85px;
 	bottom: 59px;
 	-webkit-animation: tempmove 20s forwards;
+	-moz-animation: tempmove 20s forwards;
+	-o-animation: tempmove 20s forwards;
+	animation: tempmove 20s forwards;
 }
 
 .text {
@@ -121,16 +129,23 @@ a:hover {
 	left: 180px;
 	bottom: 320px;
 	-webkit-animation: bearmove 2s infinite; 
+	-moz-animation: bearmove 2s infinite; 
+	-o-animation: bearmove 2s infinite; 
+	animation: bearmove 2s infinite; 
 }
 
 .selfie {
 	position: absolute;
-	left: 230px;
+	left: 200px;
 	bottom: 180px;
 	-webkit-animation: showpic 1s forwards;
-	animation-timing-function: ease-in-out;	
-	-webkit-animation-timing-function: ease-in-out;		
-	
+	-moz-animation: showpic 1s forwards;
+	-o-animation: showpic 1s forwards;
+	animation: showpic 1s forwards;
+	-webkit-animation-timing-function: ease-in-out;	
+	-moz-animation: ease-in-out;
+	-o-animation: ease-in-out;
+	animation-timing-function: ease-in-out;		
 }
 
 .polar-bear-sink {
@@ -138,6 +153,9 @@ a:hover {
 	/*left: 180px;*/
 	bottom: 320px;
 	-webkit-animation: sink 20s forwards;
+	-moz-animation: sink 20s forwards;
+	-o-animation: sink 20s forwards;
+	animation: sink 20s forwards;
 }
 
 
@@ -155,19 +173,20 @@ a:hover {
 	left: 40px;
 	bottom: 0px;
 	-webkit-animation: icemove 2s infinite;
-	transition: all 1s ease-in-out;
-	
+	-moz-animation: icemove 2s infinite;
+	-o-animation: icemove 2s infinite;
+	animation: icemove 2s infinite;
 }
 
-.arctic {
-
-}
 
 .sink-it {
 	position: absolute;
 	left: 40px;
 	bottom: 0px;
 	-webkit-animation: sink 20s forwards;
+	-moz-animation: sink 20s forwards;
+	-o-animation: sink 20s forwards;
+	animation: sink 20s forwards;
 	transition: all 1s ease-in-out;
 }
 
@@ -178,6 +197,10 @@ a:hover {
 	bottom: 0px;
 	-webkit-animation: watermove 2s infinite;
 	-webkit-animation: hightide 20s forwards;
+	-moz-animation: hightide 20s forwards;
+	-o-animation: hightide 20s forwards;
+	animation: hightide 20s forwards;
+
 }
 
 .water2 {
@@ -185,6 +208,9 @@ a:hover {
 	position: absolute;
 	bottom: 184px;
 	-webkit-animation: watermove 2s infinite 1s;
+	-moz-animation: watermove 2s infinite 1s;
+	-o-animation: watermove 2s infinite 1s;
+	animation: watermove 2s infinite 1s;
 }
 
 .water3 {
@@ -192,10 +218,24 @@ a:hover {
 	position: absolute;
 	bottom: 169px;
 	-webkit-animation: watermove 4s infinite 2.5s;
+	-moz-animation: watermove 4s infinite 2.5s;
+	-o-animation: watermove 4s infinite 2.5s;
+	animation: watermove 4s infinite 2.5s;
 }
 
 .steps {
-	width: 700px;
+	width: 680px;
+	padding-right: 120px;
+	animation-name: slideUp;
+	-webkit-animation-name: slideUp;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+
+	visibility: visible !important;		
 }
 
 
@@ -287,11 +327,9 @@ a:hover {
     }
 
     .button {
-    		
     	margin-right: 1em;
-    	/*position: absolute;*/
-    	bottom: 5em;
-    	left: 2em;
+    	position: absolute;
+    	bottom: 100px;
     	
     }
 
@@ -306,25 +344,45 @@ a:hover {
 	0% {left:0px} 
 	50% {transform:scale(1.1,1.2);left:30px}
 	100% {left:0px}
+}
 
+@keyframes watermove {
+	0% {left:0px} 
+	50% {transform:scale(1.1,1.2);left:30px}
+	100% {left:0px}
 }
 
 @-webkit-keyframes icemove {
 	0% {transform: rotate(0deg); bottom:0px} 
 	50% {transform: rotate(2deg); bottom:-10px}
 	100% {transform: rotate(0deg); bottom:0px}
+}
 
+@keyframes icemove {
+	0% {transform: rotate(0deg); bottom:0px} 
+	50% {transform: rotate(2deg); bottom:-10px}
+	100% {transform: rotate(0deg); bottom:0px}
 }
 
 @-webkit-keyframes bearmove {
 	0% {transform: rotate(0deg); bottom:320px} 
 	50% {transform: rotate(2deg); bottom:315px}
 	100% {transform: rotate(0deg); bottom:320px}
+}
 
+@keyframes bearmove {
+	0% {transform: rotate(0deg); bottom:320px} 
+	50% {transform: rotate(2deg); bottom:315px}
+	100% {transform: rotate(0deg); bottom:320px}
 }
 
 
 @-webkit-keyframes tempmove {
+	0% {transform:scale(1,1); left:85px; bottom:59px;} 
+	100% {transform:scale(1,3.3); left:85px; bottom:92px;}
+}
+
+@keyframes tempmove {
 	0% {transform:scale(1,1); left:85px; bottom:59px;} 
 	100% {transform:scale(1,3.3); left:85px; bottom:92px;}
 }
@@ -335,12 +393,27 @@ a:hover {
 	100% {bottom:-380px;}
 }
 
+@keyframes sink {
+	0% {bottom:0px;} 
+	100% {bottom:-380px;}
+}
+
 @-webkit-keyframes nosink {
 	0% {bottom: 0px;} 
 	100% {bottom: 0px;}
 }
 
+@keyframes nosink {
+	0% {bottom: 0px;} 
+	100% {bottom: 0px;}
+}
+
 @-webkit-keyframes hightide {
+	0% {left:0px} 
+    100% {transform:scale(1.1,2.5); left:30px}
+}
+
+@keyframes hightide {
 	0% {left:0px} 
     100% {transform:scale(1.1,2.5); left:30px}
 }
@@ -366,6 +439,68 @@ a:hover {
 	}
 }
 
+@keyframes showpic {
+	0% {
+		transform: translateX(-150%);
+	}
+	50%{
+		transform: translateX(8%);
+	}
+	65%{
+		transform: translateX(-4%);
+	}
+	80%{
+		transform: translateX(4%);
+	}
+	95%{
+		transform: ;translateX(-2%);
+	}			
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes slideUp {
+	0% {
+		transform: translateY(100%);
+	}
+	50%{
+		transform: translateY(-8%);
+	}
+	65%{
+		transform: translateY(4%);
+	}
+	80%{
+		transform: translateY(-4%);
+	}
+	95%{
+		transform: translateY(2%);
+	}			
+	100% {
+		transform: translateY(0%);
+	}	
+}
+
+@-webkit-keyframes slideUp {
+	0% {
+		-webkit-transform: translateY(100%);
+	}
+	50%{
+		-webkit-transform: translateY(-8%);
+	}
+	65%{
+		-webkit-transform: translateY(4%);
+	}
+	80%{
+		-webkit-transform: translateY(-4%);
+	}
+	95%{
+		-webkit-transform: translateY(2%);
+	}			
+	100% {
+		-webkit-transform: translateY(0%);
+	}	
+}
 
 
 
